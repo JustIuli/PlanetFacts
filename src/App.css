@@ -1,0 +1,421 @@
+body {
+    background-color: #111D2D;
+    color: #9ea0b4;
+    font-family: 'Spartan', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainContent{
+    z-index: 1000;
+    height: 100%;
+}
+
+canvas{
+    z-index: -1;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #111D2D;
+    position: relative;
+}
+
+header #logo {
+    margin-top: 20px;
+    margin-left: 25px;
+    font-family: 'Antonio', sans-serif;
+    color: white;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    list-style: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+}
+
+header nav ul li {
+    margin-right: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+header nav ul li:hover {
+    cursor: pointer;
+}
+
+header nav ul li.active {
+    color: white;
+}
+
+header nav ul li.active::after {
+    width: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+header .hamburger {
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    display: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+header .hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+header .hamburger:hover {
+    cursor: pointer;
+}
+
+.mainbody-container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    gap: 200px;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.mainbody-container .description {
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.mainbody-container .image-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.mainbody-container .image-container .planet-img {
+    max-width: 400px;
+    position: relative;
+}
+
+.mainbody-container .image-container .overlay {
+    position: absolute;
+    bottom: -20%;
+    width: 150px;
+}
+
+.mainbody-container .overview-btn {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.mainbody-container div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 360px;
+}
+
+.mainbody-container div h1 {
+    color: white;
+    margin-top: 40px;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: auto;
+    font-family: 'Antonio', sans-serif;
+}
+
+.mainbody-container div h4 {
+    width: 100%;
+    border: 2px solid #ffffff;
+    margin-bottom: 0;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.mainbody-container div h4:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: black;
+}
+
+.mainbody-container div h4 span {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #9ea0b4;
+}
+
+.mainbody-container div h4.whiteBg {
+    background-color: #ffffff;
+    color: black;
+}
+
+.information-section {
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 35px;
+}
+
+.information-section div {
+    border: 1px solid #111D2D
+    height: 120px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.information-section div p {
+    margin-left: 20px;
+}
+
+.information-section div h1 {
+    font-size: 30px;
+    margin-left: 20px;
+    color: white;
+    font-family: 'Antonio', sans-serif;
+}
+
+.button-section {
+    width: 100%;
+}
+
+.type-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+@media all and (max-width: 1100px) {
+    .mainbody-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 50px;
+        width: 90%;
+        margin-top: 50px;
+    }
+    .mainbody-container div {
+        margin: 0 auto 0 auto;
+    }
+    .image-container {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .image-container img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .infoBox{
+        color: black;
+    }
+    .information-section {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+    }
+    header {
+        top: 0;
+        z-index: 100;
+    }
+    header.headerToggle {
+        position: fixed;
+    }
+    nav{
+        padding: 10px;
+    }
+    .nav {
+        position: fixed;
+        display: flex;
+        top: 30px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        right: -40px;
+        font-size: 20px;
+        background:#020A16;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+        -webkit-transition: .7s;
+        transition: .2s;
+    }
+    .nav.navToggle {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        opacity: 1;
+        width: 100%;
+        -webkit-transition: .7s;
+    }
+    .planet-btn {
+        font-size: 28px;
+        margin-bottom: 5px;
+        margin-top: 30px;
+        opacity: 1;
+        width: 50%;
+        -webkit-transition: .35s;
+        transition: .35s;
+    }
+    .planet-btn.btnToggle {
+        opacity: 1;
+        pointer-events: auto;
+        -webkit-transition: 1s;
+    }
+    .information-section {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .information-section div {
+        width: 95%;
+    }
+    .button-section {
+        width: 95%;
+    }
+    .hamburger {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .description-section {
+        max-width: 330px;
+    }
+    .source {
+        width: 275px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .image-container img {
+        width: 95%;
+    }
+}
+
+@media all and (max-width: 300px) {
+    .description-section {
+        max-width: 275px;
+    }
+    .button-section {
+        width: 200px;
+    }
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 3px;
+    border: 10px solid #ffffff;
+}
